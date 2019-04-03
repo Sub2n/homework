@@ -64,17 +64,17 @@ a {
 }
 
 .container {
-    background: silver;
+    background: #fff;
 }
 
 .header {
-    background: red;
+    background: #fff;
     height: 90px;
     position: relative;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 400;
     font-size: 18px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .logo {
@@ -97,15 +97,40 @@ a {
 .menu-item {
     float: left;
     padding: 0 25px;
-    
+    position: relative;
+}
+
+.menu-item:hover .sub-menu{
+    display: block;
+    position: absolute;
+    width: 667px;
+    left: calc(-50% - 250px);
+    text-align: center;
+    z-index: 10;
 }
 
 .sub-menu {
     display: none;
 }
 
+.menu-item:hover .sub-menu-bg{
+    display: block;
+}
+
+.sub-menu-bg {
+    position: fixed;
+    width: 100vw;
+    top:90px;
+    left: 0;
+    height: 90px;
+    background: #d5d5d5;
+    display: none;
+    z-index: 0;
+}
+
 .sub-menu-item {
     display: inline-block;
+    margin: 0 7px;
 }
 
 .site-map{
@@ -120,6 +145,7 @@ a {
     float: right;
     padding: 33px;
     color: silver;
+    overflow: hidden;
 }
 
 .main {
