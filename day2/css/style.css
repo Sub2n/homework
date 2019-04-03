@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,900');
 @import url("./normalize.css");
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -52,6 +52,17 @@ table {
     box-sizing: border-box;
 }
 
+.header, .news-container, .spec, .footer {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* link style */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .container {
     background: silver;
 }
@@ -59,10 +70,119 @@ table {
 .header {
     background: red;
     height: 90px;
+    position: relative;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    top: 35px;
+    left: 34px;
+}
+
+.logo img {
+    width: 70px;
+    height: 25px;
+}
+
+.navigation {
+    position: absolute;
+    left: 235px;
+    line-height:90px;
+}
+
+.menu-item {
+    float: left;
+    padding: 0 25px;
+    
+}
+
+.sub-menu {
+    display: none;
+}
+
+.sub-menu-item {
+    display: inline-block;
+}
+
+.site-map{
+    float: right;
+    line-height:90px;
+    padding: 0 33px;
+    color: silver;
+    font-weight: 700;
+}
+
+.language-menu{
+    float: right;
+    padding: 33px;
+    color: silver;
 }
 
 .main {
     background: orange;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.visual {
+    width: 100%;
+    height: 70vh;
+    background: pink;
+    text-align: center;  
+    color: #fff;
+}
+
+.slogan {
+    font-size: 60px;
+    font-weight: 900;
+    padding-top: 30vh;
+    padding-bottom: 50px;
+}
+a.mission-link {
+    display: inline-block;
+    width: 180px;
+    height: 45px;
+    border: 1px solid #fff;
+    border-radius: 30%;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 45px;
+}
+
+.section-title {
+    float: left;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.more-news-link {
+    float: right;
+    padding-right: 30px;
+}
+
+.news-container {
+    margin: 70px auto;
+}
+
+.news {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    clear: both;
+}
+
+.news-item {
+   width: 550px;
+   margin: 10px 0;
+}
+
+.news-title {
+
 }
 
 .footer {
@@ -70,7 +190,3 @@ table {
     height: 10vh;
 }
 
-.header, .news-container, .spec, .footer {
-    width: 1200px;
-    margin: 0 auto;
-}
