@@ -53,3 +53,42 @@ table {
     font-family: 'Nanum Gothic', sans-serif;
 }
 
+.container {
+	width: 100%;
+	background: #fff;
+}
+
+.header, .news, .business, .footer {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.header {
+
+	background: silver;
+}
+.logo {
+	background: red;
+}
+.menu {
+	background: yellow;
+}
+.language-list {
+	background: pink;
+}
+.main {
+
+	background: orange;
+}
+.mission {
+	background: lime;
+}
+.business-bg{
+	background: #f9f9f9;
+}
+.business {
+	background: aqua;
+}
+.footer {
+	background: purple;
+}
