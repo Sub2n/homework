@@ -72,12 +72,9 @@ a {
 .header {
 	background: silver;
 	padding: 30px 0;
+	height: 90px;
 }
-.header::after {
-	content: "";
-	display: block;
-	clear: both;
-}
+
 .logo {
 	float: left;
 	background: red;
@@ -92,8 +89,20 @@ a {
 .language-list {
 	float: right;
 	background: pink;
+	width: 130px;
 	height: 40px;
 	overflow: hidden;
+}
+.language {
+	display: block;
+	padding: 5px 10px;
+	width: 130px;
+	height: 40px;
+	border-radius: 15px;
+	border: 1px solid silver;
+}
+.language-list:hover {
+	height: 240px;
 }
 .main {
 	background: orange;
