@@ -50,7 +50,8 @@ table {
 
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: 'Nanum Gothic', sans-serif;
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 1.4rem;
 }
 
 /* 링크 스타일 */
@@ -64,8 +65,7 @@ a {
 	border: none;
 	background: none;
 	color: #838383;
-	position: absolute;
-	right: 15px;
+	float: right;
 	z-index: 10;	
 }
 
@@ -81,14 +81,22 @@ html{
 .header, .news, .business, .footer {
 	width: 1200px;
 	margin: 0 auto;
-	font-size: 1.4rem;
 }
-
+.header-wrap{
+	display: block;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	height: 90px;
+	background: hsla(0,0%,100%,.95);
+	z-index: 5;
+}
 .header {
 	/* background: silver; */
 	padding: 25px 40px;
 	height: 90px;
-	position: relative;
+	background: transparent;
+	font-size: 1.4rem;
 }
 .logo {
 	float: left;
@@ -96,27 +104,10 @@ html{
 	margin-right: 125px;
 	width: 70px;
     height: 25px;
-	background: red;
 }
 .logo img{
 	width: 70px;
     height: 25px;
-}
-.menu {
-	float: left;
-	background: yellow;
-	width: 780px;
-	height: 40px;
-	font-size: 1.8rem;
-	font-weight: 400;
-}
-.menu-item {
-	float: left;
-	line-height: 40px;
-	padding: 0 25px;
-}
-.menu-item.sitemap {
-	float: right;
 }
 .btn-language{
 	display: block;
@@ -128,7 +119,7 @@ html{
     border-radius: 50px;
     right: 40px;
 	cursor: pointer;
-	border: 1px solid red;
+	border: 1px solid #c8c8c8;
 }
 .btn-language::after{
 	content: "";
@@ -147,14 +138,15 @@ html{
 	transform: rotate(-135deg);
 }
 .language-list {
-	background: pink;
 	position: absolute;
 	width: 130px;
 	top: 25px;
-	right: 40px;
+	right: 200px;
 	border: 1px solid #c8c8c8;
 	color: #838383;
+	background: #fff;
 	border-radius: 15px;
+	line-height: 1.5rem;
 	display: none;
 }
 .language-act .language-list{
@@ -163,11 +155,67 @@ html{
 }
 .language-item {
 	display: block;
-	padding: 5px 10px;
 	width: 130px;
-	height: 40px;
+	height: 30px;
 }
-
+.language-item a{
+	display: block;
+	line-height: 38px;
+	margin: 1px 0;
+	padding: 0 10px;
+}
+.menu {
+	float: left;
+	width: 780px;
+	height: 40px;
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+.menu-item {
+	float: left;
+	line-height: 40px;
+	padding: 0 25px;
+}
+.menu-item.sitemap {
+	float: right;
+	color: #838383;
+}
+.sub-menu {
+	display: none;
+}
+.menu-item a:hover, .sub-menu-item a:hover{
+	color: #00b900;
+}
+.menu-item.sitemap a:hover, .mission-menu a:hover{
+	color: #838383;
+}
+.menu-act .sub-menu {
+	position: absolute;
+	top:90px;
+	white-space: nowrap;
+	transform: translateX(-39%);
+	font-size: 1.5rem;
+	display: block;
+	padding-top: 20px;
+}
+.menu-act.menu-item::after, .menu-act.menu-item1::after {
+	content: "";
+    position: fixed;
+	top: 90px;
+	left: 0;
+    width: 100vw;
+    height: 90px;
+    background: hsla(0,0%,94%,.95);
+	z-index: -3;
+}
+.menu-act.menu-item1::after{
+    height: 190px;
+}
+.sub-menu-item {
+	float: left;
+	white-space: nowrap;
+	padding: 5px 10px;
+}
 .main {
 	background: orange;
 }
@@ -193,6 +241,10 @@ html{
 	transform: translate(-50%, -50%);
 	background: lime;
 }
+.mission-menu{
+	color: #838383;
+	line-height: 2.8rem;
+}
 .news{
 	background: orchid;
 }
@@ -205,6 +257,7 @@ html{
 .footer {
 	position: relative;
 	background: purple;
+	font-size: 1.4rem;
 }
 .familysite-list {
 	width: 220px;
