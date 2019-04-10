@@ -163,6 +163,7 @@ html{
 	line-height: 38px;
 	margin: 1px 0;
 	padding: 0 10px;
+	
 }
 .menu {
 	float: left;
@@ -175,6 +176,7 @@ html{
 	float: left;
 	line-height: 40px;
 	padding: 0 25px 25px 25px;
+	position: relative;
 }
 .sitemap {
 	float: right;
@@ -190,29 +192,25 @@ html{
 }
 .sub-menu {
 	position: absolute;
-	top:90px;
-	
+	/* top:90px; */
+	display: flex;
+	justify-content: center;
+	background: hsla(0,0%,94%,.95);
 	font-size: 1.5rem;
-
+	width: 200vw;
+	left:50%;
+	top:65px;
 	height: 0;
 	overflow: hidden;
 
-	-webkit-transform: translateX(-39%); /* Chrome, Safari, Opera */
-	-moz-transform: translateX(-39%);
-	-ms-transform: translateX(-39%); /* IE 9 */
-	-o-transform: translateX(-39%);
-	transform: translateX(-39%);
-
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
+	transform: translateX(-50%);
 	transition: all .5s ease;
 }
 .menu-item.menu-act .sub-menu {
 	height: auto;
 	padding-top: 20px;
 }
-.menu-item::after, .menu-item1::after{
+/* .menu-item::after, .menu-item1::after{
 	content: "";
     position: fixed;
 	top: 90px;
@@ -233,7 +231,7 @@ html{
 }
 .menu-act.menu-item1::after{
     height: 180px;
-}
+} */
 .sub-menu-item {
 	float: left;
 	white-space: nowrap;
