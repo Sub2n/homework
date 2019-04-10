@@ -93,7 +93,7 @@ html{
 }
 .header {
 	/* background: silver; */
-	padding: 25px 40px;
+	padding: 25px 40px 0 40px;
 	height: 90px;
 	background: transparent;
 	font-size: 1.4rem;
@@ -103,7 +103,7 @@ html{
 	margin-top: 8px;
 	margin-right: 125px;
 	width: 70px;
-    height: 25px;
+	height: 25px;
 }
 .logo img{
 	width: 70px;
@@ -168,20 +168,19 @@ html{
 	float: left;
 	width: 780px;
 	height: 40px;
-	font-size: 1.8rem;
+	font-size: 1.7rem;
 	font-weight: 400;
 }
 .menu-item {
 	float: left;
 	line-height: 40px;
-	padding: 0 25px;
+	padding: 0 25px 25px 25px;
 }
-.menu-item.sitemap {
+.sitemap {
 	float: right;
+	line-height: 40px;
+	padding: 0 25px 25px 25px;
 	color: #838383;
-}
-.sub-menu {
-	display: none;
 }
 .menu-item a:hover, .sub-menu-item a:hover{
 	color: #00b900;
@@ -189,27 +188,51 @@ html{
 .menu-item.sitemap a:hover, .mission-menu a:hover{
 	color: #838383;
 }
-.menu-act .sub-menu {
+.sub-menu {
 	position: absolute;
 	top:90px;
-	white-space: nowrap;
-	transform: translateX(-39%);
+	
 	font-size: 1.5rem;
-	display: block;
+
+	height: 0;
+	overflow: hidden;
+
+	-webkit-transform: translateX(-39%); /* Chrome, Safari, Opera */
+	-moz-transform: translateX(-39%);
+	-ms-transform: translateX(-39%); /* IE 9 */
+	-o-transform: translateX(-39%);
+	transform: translateX(-39%);
+
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all .5s ease;
+}
+.menu-item.menu-act .sub-menu {
+	height: auto;
 	padding-top: 20px;
 }
-.menu-act.menu-item::after, .menu-act.menu-item1::after {
+.menu-item::after, .menu-item1::after{
 	content: "";
     position: fixed;
 	top: 90px;
 	left: 0;
     width: 100vw;
-    height: 90px;
     background: hsla(0,0%,94%,.95);
 	z-index: -3;
+
+	height: 0;
+	overflow: hidden;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all .5s ease;
+}
+.menu-act.menu-item::after {
+	height: 90px;
 }
 .menu-act.menu-item1::after{
-    height: 190px;
+    height: 180px;
 }
 .sub-menu-item {
 	float: left;
