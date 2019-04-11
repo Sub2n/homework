@@ -181,51 +181,47 @@ html{
 	float: right;
 	color: #838383;
 }
-.sub-menu {
-	display: none;
-}
 .menu-item a:hover, .sub-menu-item a:hover{
 	color: #00b900;
 }
 .menu-item.sitemap a:hover, .mission-menu a:hover{
 	color: #838383;
 }
-.menu-act .sub-menu {
+.sub-menu {
+	overflow: hidden;
+	height: 0;
+	font-size: 1.5rem;
+	padding-top: 20px;
+	font-size: 1.5rem;
 	position: absolute;
 	top:90px;
-	white-space: nowrap;
-	font-size: 1.5rem;
-
 	padding-top: 20px;
 
-	height: 0;
-	overflow: hidden;
-
-
 	transform: translateX(-39%);
-
-
 	transition: all .5s ease;
+	white-space: nowrap;	
 }
-.menu-act.menu-item::after, .menu-act.menu-item1::after {
+.menu-act .sub-menu {
+	height: auto;
+}
+.menu-item::after, .menu-item1::after {
 	content: "";
     position: fixed;
 	top: 90px;
 	left: 0;
     width: 100vw;
-    height: 90px;
+    height: 0;
     background: hsla(0,0%,94%,.95);
 	z-index: -3;
 
-	height: 0;
 	overflow: hidden;
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
 	transition: all .5s ease;
 }
+.menu-act.menu-item::after, .menu-act.menu-item1::after {
+    height: 90px;
+}
 .menu-act.menu-item1::after{
-    height: 190px;
+	height: 190px;
 }
 .sub-menu-item {
 	float: left;
