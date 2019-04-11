@@ -93,7 +93,7 @@ html{
 }
 .header {
 	/* background: silver; */
-	padding: 25px 40px 0 40px;
+	padding: 25px 40px;
 	height: 90px;
 	background: transparent;
 	font-size: 1.4rem;
@@ -103,7 +103,7 @@ html{
 	margin-top: 8px;
 	margin-right: 125px;
 	width: 70px;
-	height: 25px;
+    height: 25px;
 }
 .logo img{
 	width: 70px;
@@ -169,20 +169,20 @@ html{
 	float: left;
 	width: 780px;
 	height: 40px;
-	font-size: 1.7rem;
+	font-size: 1.8rem;
 	font-weight: 400;
 }
 .menu-item {
 	float: left;
 	line-height: 40px;
-	padding: 0 25px 25px 25px;
-	position: relative;
+	padding: 0 25px;
 }
-.sitemap {
+.menu-item.sitemap {
 	float: right;
-	line-height: 40px;
-	padding: 0 25px 25px 25px;
 	color: #838383;
+}
+.sub-menu {
+	display: none;
 }
 .menu-item a:hover, .sub-menu-item a:hover{
 	color: #00b900;
@@ -190,28 +190,30 @@ html{
 .menu-item.sitemap a:hover, .mission-menu a:hover{
 	color: #838383;
 }
-.sub-menu {
+.menu-act .sub-menu {
 	position: absolute;
 	top:90px;
-
-	background: hsla(0,0%,94%,.95);
+	white-space: nowrap;
 	font-size: 1.5rem;
+
+	padding-top: 20px;
+
 	height: 0;
 	overflow: hidden;
-	white-space: nowrap;
+
+
 	transform: translateX(-39%);
+
+
 	transition: all .5s ease;
 }
-.menu-item.menu-act .sub-menu {
-	height: auto;
-	padding-top: 20px;
-}
-.menu-item::after, .menu-item1::after{
+.menu-act.menu-item::after, .menu-act.menu-item1::after {
 	content: "";
     position: fixed;
 	top: 90px;
 	left: 0;
     width: 100vw;
+    height: 90px;
     background: hsla(0,0%,94%,.95);
 	z-index: -3;
 
@@ -222,11 +224,8 @@ html{
 	-o-transition: all 0.3s ease;
 	transition: all .5s ease;
 }
-.menu-act.menu-item::after {
-	height: 90px;
-}
 .menu-act.menu-item1::after{
-    height: 180px;
+    height: 190px;
 }
 .sub-menu-item {
 	float: left;

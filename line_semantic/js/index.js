@@ -36,7 +36,3 @@ menuItem.on('mouseenter', function(){
     menuItem.removeClass('menu-act');
     $(this).addClass('menu-act');
 });
-
-menuItem.on('mouseleave', function(){
-    $(this).removeClass('menu-act');
-});
