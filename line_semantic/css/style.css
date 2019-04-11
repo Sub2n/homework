@@ -192,25 +192,21 @@ html{
 }
 .sub-menu {
 	position: absolute;
-	/* top:90px; */
-	display: flex;
-	justify-content: center;
+	top:90px;
+
 	background: hsla(0,0%,94%,.95);
 	font-size: 1.5rem;
-	width: 200vw;
-	left:50%;
-	top:65px;
 	height: 0;
 	overflow: hidden;
-
-	transform: translateX(-50%);
+	white-space: nowrap;
+	transform: translateX(-39%);
 	transition: all .5s ease;
 }
 .menu-item.menu-act .sub-menu {
 	height: auto;
 	padding-top: 20px;
 }
-/* .menu-item::after, .menu-item1::after{
+.menu-item::after, .menu-item1::after{
 	content: "";
     position: fixed;
 	top: 90px;
@@ -231,7 +227,7 @@ html{
 }
 .menu-act.menu-item1::after{
     height: 180px;
-} */
+}
 .sub-menu-item {
 	float: left;
 	white-space: nowrap;
